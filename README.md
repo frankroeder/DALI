@@ -1,6 +1,6 @@
 # Dynamics-Aligned Latent Imagination (DALI)
 
-#### [[arXiv]](https://arxiv.org/abs/2508.20294) [[Code]](https://github.com/frankroeder/DALI)
+#### [[OpenReview]](https://openreview.net/forum?id=41bIzD5sit) [[arXiv]](https://arxiv.org/abs/2508.20294) [[Code]](https://github.com/frankroeder/DALI)
 
 [Frank Röder*](https://frankroeder.github.io/), [Jan Benad](https://scholar.google.com/citations?user=FWy1Ov0AAAAJ), [Manfred Eppe](https://scholar.google.de/citations?user=fG0VWroAAAAJ), [Pradeep Kr. Banerjee*](https://scholar.google.com/citations?user=cnSjMBwAAAAJ) (&#42; equal contribution)<br/>
 All the listed authors are members of the [Institute for Data Science Foundations](https://www.tuhh.de/dsf/homepage).
