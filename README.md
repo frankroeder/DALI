@@ -16,11 +16,13 @@ This is the official implementation of the DALI approach using JAX.
 
 
 ```
-@article{Roder_DynamicsAlignedLatent_2025,
-  title = {Dynamics-{{Aligned Latent Imagination}} in {{Contextual World Models}} for {{Zero-Shot Generalization}}},
-  author = {R{\"o}der, Frank and Benad, Jan and Eppe, Manfred and Banerjee, Pradeep Kr},
-  journal={arXiv preprint arXiv:2508.20294},
-  year = {2025},
+@inproceedings{
+  Roder_DynamicsAlignedLatent_2025,
+  title={Dynamics-Aligned Latent Imagination in Contextual World Models for Zero-Shot Generalization},
+  author={Frank R{\"o}der and Jan Benad and Manfred Eppe and Pradeep Kr. Banerjee},
+  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
+  year={2025},
+  url={https://openreview.net/forum?id=41bIzD5sit}
 }
 ```
 
