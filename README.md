@@ -7,15 +7,22 @@ All the listed authors are members of the [Institute for Data Science Foundation
 
 ---
 
-This is the official implementation of the DALI approach using JAX.
+This is the official implementation of **Dynamics-Aligned Latent Imagination** (**DALI**) based on [Jax](https://github.com/jax-ml/jax).
+DALI introduces a Dreamer-based architecture with a self-supervised context encoder designed to infer latent environmental
+parameters, such as gravity or friction. This integration facilitates robust zero-shot adaptation to diverse and previously
+unseen dynamics. Furthermore, manipulating the learned context representation enables physically plausible counterfactual imagination directly within the world model.
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/0f2ae302-4b55-40ea-98f9-c99b556b3cff">
 <img src="https://github.com/user-attachments/assets/2285bb58-6943-462d-ac26-4ceeaa3ccba1">
+
+<img src="https://github.com/user-attachments/assets/d7e2009b-4ecf-4c89-a3df-908ac58a0e0d">
+
 </p>
 
-
-```
+### Citation
+If this code or paper aids your research, please cite it as follows:
+```bib
 @inproceedings{
   Roder_DynamicsAlignedLatent_2025,
   title={Dynamics-Aligned Latent Imagination in Contextual World Models for Zero-Shot Generalization},
@@ -27,7 +34,7 @@ This is the official implementation of the DALI approach using JAX.
 ```
 
 ## Setup
-Use `uv` to setup your python environment.
+Use [uv](https://github.com/astral-sh/uv) to setup your python environment.
 
 ```bash
 uv sync
@@ -37,9 +44,9 @@ uv pip install -e ./
 
 ## Training
 
-Run scripts in `./local_scripts/` to generate results for experts, random policies and DALI variants.
+Run scripts in `./local_scripts/` to generate results for experts, random policies, and DALI variants.
 
-## Record Data for Anaylsis
+## Record Data for Analysis
 
 ```bash
 uv run -m contextual_mbrl.dreamer.record_context --logdir logs/carl_dmc_walker_double_box_enc_img_dec_img_ctxencoder_transformer_normalized/1337
@@ -63,3 +70,9 @@ uv run -m contextual_mbrl.dreamer.record_counterfactual_plausibility_obs_dataset
 ## Plots
 
 To generate the plots, run the scripts in the `./analysis` directory.
+
+## Acknowledgments
+
+- cRSSM variants: Prasanna et al. 2024 - [https://github.com/sai-prasanna/dreaming_of_many_worlds](https://github.com/sai-prasanna/dreaming_of_many_worlds) 
+- DreamerV3: Hafner et al. 2023 - [https://github.com/danijar/dreamerv3](https://github.com/danijar/dreamerv3)
+- CARL benchmark: Benjamins et al. 2023 - [https://github.com/automl/CARL](https://github.com/automl/CARL) 
