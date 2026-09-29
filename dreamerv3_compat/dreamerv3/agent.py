@@ -235,6 +235,8 @@ class WorldModel(nj.Module):
 
     def train(self, data, state):
         modules = [self.encoder, self.rssm, *self.heads.values()]
+        if self.use_ctx_encoder:
+            modules.append(self.ctx_encoder)
         mets, (state, outs, metrics) = self.opt(
             modules, self.loss, data, state, has_aux=True
         )
@@ -309,7 +311,7 @@ class WorldModel(nj.Module):
                 )
                 if 'embed' in self.config.ctx_encoder.inputs:
                     padded_embed = jnp.pad(
-                        embed[:, :t],
+                        sg(embed[:, :t]),
                         ((0, 0), (pad_width, 0), (0, 0)),
                         mode='edge'
                     )
